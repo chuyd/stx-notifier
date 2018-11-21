@@ -69,7 +69,6 @@ func queryAndSend() {
 	response, err := http.Get(url)
 	if err != nil {
 		log.Fatal(err)
-		os.Exit(1)
 	}
 
 	responseData, err := ioutil.ReadAll(response.Body)
