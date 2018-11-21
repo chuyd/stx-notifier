@@ -83,7 +83,7 @@ func queryAndSend() {
 	var r []GerritChange
 	err = json.Unmarshal(responseData[4:], &r)
 	if err != nil {
-		log.Fatal(err)
+		log.Error(err)
 	}
 
 	if len(r) > 0 {
